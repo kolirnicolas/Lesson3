@@ -16,9 +16,8 @@ public class Task10 {
     public static Map<Integer, String> convertListToTreeMapWithException(final List<String> strings) {
 
         return strings.stream()
-                .collect(Collectors
-                        .toMap(String::length, Function.identity(), (a, b) -> {
-                            throw new IllegalArgumentException("ищи ошибки");
+                .collect(Collectors.toMap(String::length, Function.identity(), (a, b) -> {
+                            throw new IllegalArgumentException("ищи ошибки" + b);
                         }, TreeMap::new));
     }
 
