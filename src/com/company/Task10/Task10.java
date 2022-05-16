@@ -17,7 +17,7 @@ public class Task10 {
 
         return strings.stream()
                 .collect(Collectors.toMap(String::length, Function.identity(), (q, b) -> {
-                            throw new IllegalArgumentException("ищи ошибки" + b);
+                            throw new IllegalArgumentException("ищи ошибки" + q);
                         }, TreeMap::new));
     }
 
